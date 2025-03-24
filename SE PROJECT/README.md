@@ -1,15 +1,16 @@
-# library_management_system
+# library_information_system
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/47834415/97384109-f18be300-18c6-11eb-9555-5eafb6b00551.png" alt="ponty-home" width="450px" height="200px" />
 </p>
 
 # Table of contents
-* [General info](#general-info)
-* [Learning outcome](#learning-outcome)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#Features)
+
+- [General info](#general-info)
+- [Learning outcome](#learning-outcome)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#Features)
 
 # General info
 
@@ -19,33 +20,34 @@ The application also comes with an .sqlite database in which the data for the ap
 
 The applications itself provides a simple server with a REST API which has the following functionality:
 
-•	API endpoints:
+• API endpoints:
 
-	/users
-	/books
-	/loans
+    /users
+    /books
+    /loans
 
 Each API endpoint accepts HTTP requests with the verbs GET, POST, PUT and DELETE.
 
 This system will be used by the librarians to manage their library and associated data. The created front-end allows them to:
+
 ### Users Section
 
-	U1 - Add a new User to the Library system with the fields Name, Barcode and Member Type (Staff/Student)
-	U2 - Get a User’s details from the Library system by searching on Name or Barcode
-	U3 - Update a User’s Name or Member Type
-	U4 - Remove a User
-	
+    U1 - Add a new User to the Library system with the fields Name, Barcode and Member Type (Staff/Student)
+    U2 - Get a User’s details from the Library system by searching on Name or Barcode
+    U3 - Update a User’s Name or Member Type
+    U4 - Remove a User
+
 ### Loans Section
 
-	B1 - Add a new Book to the Library system with the fields Title, ISBN, Authors
-	B2 - Get a Book’s details by searching on Title or Author
-	B3 - Remove a Book
-	
+    B1 - Add a new Book to the Library system with the fields Title, ISBN, Authors
+    B2 - Get a Book’s details by searching on Title or Author
+    B3 - Remove a Book
+
 ### Books Section
 
-	L1 - Loan a Book to a User (if it is not already out on Loan), specifying the Due Date
-	L2 - Get the User currently borrowing a Book
-	L3 - Get a list of a User’s current Loans
+    L1 - Loan a Book to a User (if it is not already out on Loan), specifying the Due Date
+    L2 - Get the User currently borrowing a Book
+    L3 - Get a list of a User’s current Loans
 
 API endpoints are implemented in the Server application to allow this functionality, documentation comments on each endpoint and the parameters accepted are included in the server application source code.
 
@@ -63,11 +65,12 @@ API endpoints are implemented in the Server application to allow this functional
 
 Project is created with:
 </br>
-* JavaScript
-* HTML 5
-* CSS 3
-* SQL
-* Node.JS
+
+- JavaScript
+- HTML 5
+- CSS 3
+- SQL
+- Node.JS
 
 ## Setup
 
@@ -107,10 +110,9 @@ This will start the server running on `127.0.0.1` port `3000`.
 
 To check the database and server are operating correctly you can open `http://127.0.0.1:3000/authors` in a Web Browser. This should return a JSON representation of all the Authors stored in the database.
 
+### Running the Front-End Application❗
 
-### Running the Front-End Application❗ 
-
-``Use terminal to open the `front-end` folder:``
+`` Use terminal to open the `front-end` folder: ``
 
 Run the application in the development mode in `front-end` i.e.:
 
@@ -137,20 +139,19 @@ Mobile view:
 
 All User records are retrieved from the server once the page is loaded.
 
-<strong>*** Search User by Name or Barcode: </strong> The search bar is a text input that will dynamically and instantly, without refreshing the webpage filter the user records table, based on the charachters contained inside user’s barcode or name.
+<strong>\*\*\* Search User by Name or Barcode: </strong> The search bar is a text input that will dynamically and instantly, without refreshing the webpage filter the user records table, based on the charachters contained inside user’s barcode or name.
 
-<strong>*** Add User: </strong> click `ADD NEW USER`
+<strong>\*\*\* Add User: </strong> click `ADD NEW USER`
 
 <img src="https://user-images.githubusercontent.com/47834415/97507553-50a83100-1975-11eb-8ddf-b52065d0d77f.png" alt="new-user" width="550px" />
 
 Populate the prompted information in the form. Click `Submit` button, which will send a POST request to the server and update the database. Note: Barcode needs to contain 6 digits, otherwise the request will not be sent and prompt message will appear to provide 6 digits.
 
-<strong>*** Remove User: </strong> Click the `DELETE` button in the Users Table, next to the chosen record under Delete User column. Confirmation pop-up message will appear, choose `CANCEL` or `OK`.
+<strong>\*\*\* Remove User: </strong> Click the `DELETE` button in the Users Table, next to the chosen record under Delete User column. Confirmation pop-up message will appear, choose `CANCEL` or `OK`.
 
-<strong>*** Edit User: </strong> Enter the existing User's details. Once the details are changed, click `Submit` button to finalise the update. The updated information appears in the database.
+<strong>\*\*\* Edit User: </strong> Enter the existing User's details. Once the details are changed, click `Submit` button to finalise the update. The updated information appears in the database.
 
 <img src="https://user-images.githubusercontent.com/47834415/97508115-bb0da100-1976-11eb-9072-afea427a6d70.png" alt="cloud-icon" width="550px" />
-
 
 ### Books Section
 
@@ -158,29 +159,28 @@ Populate the prompted information in the form. Click `Submit` button, which will
 
 All Book records are retrieved from the server once the page is loaded.
 
-<strong>*** Search Book by Title or Author: </strong> The search bar is a text input that will dynamically and instantlly, without refreshing the webpage filter the book records table, based on the charachters contained inside book’s title or author.
+<strong>\*\*\* Search Book by Title or Author: </strong> The search bar is a text input that will dynamically and instantlly, without refreshing the webpage filter the book records table, based on the charachters contained inside book’s title or author.
 
-<strong>*** Add Book: </strong> Click `ADD NEW BOOK` populate the prompted information in the form, to submit new book's details to the database.
+<strong>\*\*\* Add Book: </strong> Click `ADD NEW BOOK` populate the prompted information in the form, to submit new book's details to the database.
 
 <img src="https://user-images.githubusercontent.com/47834415/97509367-ffe70700-1979-11eb-93fb-b9e2e6bda223.png" alt="cloud-icon" width="550px" />
 
-<strong>*** Delete Book: </strong> Click the `DELETE` button in the Books Table, next to the chosen record under `Delete Book` column. Confirmation pop-up message will appear, choose `CANCEL` or `OK`.
+<strong>\*\*\* Delete Book: </strong> Click the `DELETE` button in the Books Table, next to the chosen record under `Delete Book` column. Confirmation pop-up message will appear, choose `CANCEL` or `OK`.
 
-<strong>*** Edit Book: </strong> Click the `EDIT` button in the Books Table, new page will open, change the information accordingly and click `Submit`.
+<strong>\*\*\* Edit Book: </strong> Click the `EDIT` button in the Books Table, new page will open, change the information accordingly and click `Submit`.
 
 ### Loans Section
 
-<strong>*** Search Loans by User's ID: </strong> input user's ID in the prompted field, click `SEARCH` button. All the books, borrowed using the specified ID are displayed.
+<strong>\*\*\* Search Loans by User's ID: </strong> input user's ID in the prompted field, click `SEARCH` button. All the books, borrowed using the specified ID are displayed.
 
 <img src="https://user-images.githubusercontent.com/47834415/97510177-1b531180-197c-11eb-970c-083e7ac6852b.png" alt="cloud-icon" width="550px" />
 
 If there are any loans on provided user's ID, then the main table will be updated and `RESET SEARCH` button will appear, to return to previous state. Otherwise, "No loans found!" message will appear and `RESET SEARCH` button will appear.
 
-<strong>*** Add New Loan: </strong> Click `ADD NEW LOAN` input fields, populate the form with prompted information.
+<strong>\*\*\* Add New Loan: </strong> Click `ADD NEW LOAN` input fields, populate the form with prompted information.
 
 <img src="https://user-images.githubusercontent.com/47834415/97510901-a8e33100-197d-11eb-88f8-ed22797b2843.png" width="575px" />
 
 When finished, click `SUBMIT`.
 
-<strong>*** Find User Borrowing the Book: </strong> Input book's ID in the prompted field. Click `SEARCH` If the book does not exist or has not been loaned out, "No loans found!" message will appear and `RESET SEARCH` button will appear. Otherwise, Loans table will update loans, showing the User ID holding the Book.
-
+<strong>\*\*\* Find User Borrowing the Book: </strong> Input book's ID in the prompted field. Click `SEARCH` If the book does not exist or has not been loaned out, "No loans found!" message will appear and `RESET SEARCH` button will appear. Otherwise, Loans table will update loans, showing the User ID holding the Book.
